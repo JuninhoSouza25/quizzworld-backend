@@ -3,13 +3,12 @@ require('dotenv').config();
 
 async function main(){
 
-  const USER = "juninhosouza"
-  const PASSWORD = "6MJYz9okB7B3YwTJ"
+  const DBURL = process.env.MONGODB_URI 
 
   try {
     
     await mongoose.connect(
-     `mongodb+srv://${USER}:${PASSWORD}@cluster0.0xndlol.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp`
+     DBURL
     )
 
     console.log("Conectado ao banco")
