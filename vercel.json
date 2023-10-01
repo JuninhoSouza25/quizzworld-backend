@@ -1,7 +1,7 @@
 {
   "builds":[
     {
-      "start": "node ./app.js",
+      "src": "./app.js",
       "use": "@vercel/node"
     }
   ]
