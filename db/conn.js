@@ -3,8 +3,8 @@ require('dotenv').config();
 
 async function main(){
 
-  const USER = process.env.DB_NAME
-  const PASSWORD = process.env.DB_PASSWORD
+  const USER = "juninhosouza"
+  const PASSWORD = "6MJYz9okB7B3YwTJ"
 
   try {
     
