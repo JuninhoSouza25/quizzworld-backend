@@ -1,12 +1,15 @@
 const mongoose = require("mongoose")
+require('dotenv').config();
 
 async function main(){
 
+  const USER = process.env.DB_NAME
+  const PASSWORD = process.env.DB_PASSWORD
 
   try {
     
     await mongoose.connect(
-     `mongodb+srv://juninhosouza:6MJYz9okB7B3YwTJ@cluster0.0xndlol.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp`
+     `mongodb+srv://${USER}:${PASSWORD}@cluster0.0xndlol.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp`
     )
 
     console.log("Conectado ao banco")
