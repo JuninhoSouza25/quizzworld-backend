@@ -14,7 +14,9 @@ const themeSchema = new Schema({
   image: {
     type: String,
     required: true
-  }
+  },
+  countRight: Number,
+  countWrong: Number
 }, {timestamps: true});
 
 const Theme = mongoose.model("Theme", themeSchema);

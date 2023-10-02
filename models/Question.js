@@ -26,7 +26,9 @@ const questionSchema = new Schema({
   },
   image: {
     type: String,
-  }
+  },
+  countRight: Number,
+  countWrong: Number
 }, {timestamps: true});
 
 const Question = mongoose.model("Question", questionSchema);
