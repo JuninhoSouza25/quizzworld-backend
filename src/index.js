@@ -7,16 +7,16 @@ app.use(cors())
 app.use(express.json())
 
 // DB connection
-const conn = require("./db/conn")
+const conn = require("../db/conn")
 conn();
 
 // Routes
 
-const routes = require("./routes/router")
+const routes = require("../routes/router")
 
 app.use("/api", routes)
 
-const home = require("./routes/home")
+const home = require("../routes/home")
 
 app.use("/", home)
 
