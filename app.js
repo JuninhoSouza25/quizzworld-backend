@@ -16,6 +16,10 @@ const routes = require("./routes/router")
 
 app.use("/api", routes)
 
+const home = require("./routes/home")
+
+app.use("/", home)
+
 
 app.listen(process.env.PORT, function() {
   console.log("Servidor Online")
