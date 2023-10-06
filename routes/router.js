@@ -18,4 +18,10 @@ const questionRouter = require("./questions")
 
 router.use("/", questionRouter)
 
+// User Routes
+
+const userRouter = require("./users")
+
+router.use("/", userRouter)
+
 module.exports = router;
