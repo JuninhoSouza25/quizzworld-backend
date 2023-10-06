@@ -1,7 +1,7 @@
 const { User: UserModel } = require("../models/User");
+const bcrypt = require('bcrypt');
 
 const userController = {
-
   create: async(req, res) => {
     try {
       
@@ -10,14 +10,44 @@ const userController = {
         username: req.body.username,
         email: req.body.email,
         password: req.body.password,
+        confirmpassword: req.body.confirmpassword,
         role: req.body.role,
         thumbnail: req.body.thumbnail,
         birthday: req.body.birthday,
         phone: req.body.phone
       }
-
       
-      const response = await UserModel.create(user);
+      if (user.password !== user.confirmpassword){
+        return res.status(422).json({msg: "As senhas devem ser iguais"})
+      }
+
+      const emailExists = await UserModel.findOne({email: user.email})
+
+      if(emailExists) {
+        return res.status(422).json({msg: `Email ${emailExists.email} já cadastrado`})
+      }
+
+      const usernameExists = await UserModel.findOne({username: user.username})
+
+      if(usernameExists) {
+        return res.status(422).json({msg: `Username ${usernameExists.username} já cadastrado`})
+      }
+
+      // Create password
+
+     const salt = await bcrypt.genSalt()
+     const passwordHash = await bcrypt.hash(user.password, salt)
+
+      const response = await UserModel.create({
+        name: user.name,
+        username: user.username,
+        email: user.email,
+        password: passwordHash,
+        role: user.role,
+        thumbnail: user.thumbnail,
+        birthday: user.birthday,
+        phone: user.phone
+      });
 
       res.status(201).json({ response, msg:"Usuário criado com sucesso!"})
 
@@ -38,18 +68,19 @@ const userController = {
     }
 
   },
-  get: async(req, res) => {
+  get: async (req, res) => {
     try {
       const id = req.params.id
-      const user = await UserModel.findById(id);
+      const user = await UserModel.findById(id, '-password');
 
       if(!user) {
         res.status(404).json({msg: "Usuário não encontrado!"})
         return;
       }
 
-      res.json(user);
+      res.status(200).json({user});
 
+      
     } catch (error) {
       console.log(error)
     }
@@ -82,6 +113,7 @@ const userController = {
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
+      confirmpassword: req.body.confirmpassword,
       role: req.body.role,
       thumbnail: req.body.thumbnail,
       birthday: req.body.birthday,

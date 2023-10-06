@@ -19,6 +19,10 @@ const userScheme = new Schema({
     type: String,
     required: true
   },
+  confirmpassword: {
+    type: String,
+    required: false
+  },
   role: {
     type: String,
     required: true
