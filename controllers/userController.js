@@ -13,24 +13,22 @@ const userController = {
         confirmpassword: req.body.confirmpassword,
         role: req.body.role,
         thumbnail: req.body.thumbnail,
-        birthday: req.body.birthday,
-        phone: req.body.phone
       }
       
       if (user.password !== user.confirmpassword){
-        return res.status(422).json({msg: "As senhas devem ser iguais"})
+        return res.status(401).json({msg: "As senhas devem ser iguais"})
       }
 
       const emailExists = await UserModel.findOne({email: user.email})
 
       if(emailExists) {
-        return res.status(422).json({msg: `Email ${emailExists.email} já cadastrado`})
+        return res.status(401).json({msg: `Email ${emailExists.email} já cadastrado`})
       }
 
       const usernameExists = await UserModel.findOne({username: user.username})
 
       if(usernameExists) {
-        return res.status(422).json({msg: `Username ${usernameExists.username} já cadastrado`})
+        return res.status(401).json({msg: `Username ${usernameExists.username} já cadastrado`})
       }
 
       // Create password
@@ -45,8 +43,6 @@ const userController = {
         password: passwordHash,
         role: user.role,
         thumbnail: user.thumbnail,
-        birthday: user.birthday,
-        phone: user.phone
       });
 
       res.status(201).json({ response, msg:"Usuário criado com sucesso!"})
@@ -116,8 +112,6 @@ const userController = {
       confirmpassword: req.body.confirmpassword,
       role: req.body.role,
       thumbnail: req.body.thumbnail,
-      birthday: req.body.birthday,
-      phone: req.body.phone
     }
 
     

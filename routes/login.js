@@ -14,23 +14,23 @@ router
       }
   
       if (!login.email){
-        return res.status(422).json({msg: "Email é obrigatório!"})
+        return res.status(401).json({msg: "Email é obrigatório!"})
       }
   
       if (!login.password){
-        return res.status(422).json({msg: "Password é obrigatório!"})
+        return res.status(401).json({msg: "Password é obrigatório!"})
       }
 
       const user = await UserModel.findOne({email: login.email})
 
       if(!user) {
-        return res.status(404).json({msg: `Email ${user.email}não encontrado`})
+        return res.status(401).json({msg: `Email ${login.email} não encontrado`})
       }
       
       const checkPassword = await bcrypt.compare(login.password, user.password)
 
       if(!checkPassword) {
-        return res.status(422).json({msg: `Senha inválida`})
+        return res.status(401).json({msg: `Senha inválida`})
       }
       
       try {
@@ -39,12 +39,12 @@ router
 
         const token = jwt.sign(
           {
-            id: user._id,
+            user: user,
           },
           secret
         )
 
-        res.status(200).json({msg: "Autenticação realizada com sucesso! ", token})
+        res.status(200).json({msg: "Autenticação realizada com sucesso! ",user, token})
 
       } catch (error) {
         console.log(error)

@@ -1,3 +1,5 @@
+const uploadImage = require('../config/multer')
+
 const router = require("express").Router()
 
 // Themes Routes
@@ -29,6 +31,18 @@ router.use("/", userRouter)
 const loginRouter = require("./login")
 
 router.use("/", loginRouter)
+
+// Roles Routes
+
+const rolesRouter = require("./roles")
+
+router.use("/", rolesRouter)
+
+// Image Routes
+
+const imagesRouter = require("./images")
+
+router.use("/", uploadImage.single("file"), imagesRouter)
 
 
 module.exports = router;

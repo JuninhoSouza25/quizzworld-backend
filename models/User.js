@@ -30,14 +30,6 @@ const userScheme = new Schema({
   thumbnail: {
     type: String,
     required: false
-  },
-  birthday: {
-    type: String,
-    required: false
-  },
-  phone: {
-    type: Number,
-    required: false
   }
 }, {timestamps: true});
 
