@@ -62,9 +62,11 @@ const imageController = {
         return;
       }
 
-      const deletedlevel = await ImageModel.findByIdAndDelete(id)
+      fs.unlinkSync(image.src)
 
-      res.status(200).json({deletedlevel, msg: "Imagem excluída com sucesso!"})
+      await ImageModel.findByIdAndDelete(id)
+
+      res.status(200).json({msg: "Imagem excluída com sucesso!"})
       
     } catch (error) {
       res.status(500).json({msg: "Erro ao buscar imagem!"})
