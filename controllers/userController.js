@@ -122,7 +122,7 @@ const userController = {
       return;
     }
 
-    res.status(200).json({ user, msg:"User atualizado com sucesso!"})
+    res.status(200).json({user, msg:"User atualizado com sucesso!"})
 
   }
 

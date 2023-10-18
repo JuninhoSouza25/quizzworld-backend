@@ -8,6 +8,8 @@ router.route("/images").get((req, res) => imageController.getAll(req, res));
 
 router.route("/image/:id").get((req, res) => imageController.get(req, res));
 
+// router.route("/images/image/:filename").get((req, res) => imageController.getImage(req, res));
+
 router.route("/image/:id").delete((req, res) => imageController.delete(req, res));
 
 module.exports = router;
