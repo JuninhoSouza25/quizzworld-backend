@@ -1,4 +1,5 @@
 const { Image: ImageModel} = require("../models/Image");
+const path = require("path");
 
 const fs = require("fs")
 
@@ -7,11 +8,19 @@ const imageController = {
     try {
      
    
-      const file = req.file
+      const file = {
+        name: req.file.originalname,
+        src: req.file.firebaseUrl
+      }
+
+      const response = await ImageModel.create({
+        name: file.name,
+        src: file.src
+      });
 
       console.log(file)
 
-      res.status(201).json({msg:"Imagem salva com sucesso!", file})
+      res.status(201).json({response, msg:"Imagem salva com sucesso!", file})
 
     } catch (error) {
       res.status(500).json({msg: "Erro ao salvar a imagem!"})
@@ -58,8 +67,6 @@ const imageController = {
         res.status(404).json({msg: "Imagem não encontrada!"})
         return;
       }
-
-      fs.unlinkSync(image.src)
 
       await ImageModel.findByIdAndDelete(id)
 

@@ -7,7 +7,8 @@ const questionController = {
       
       const question = {
         question: req.body.question,
-        theme: req.body.theme, 
+        theme: req.body.theme,
+        author: req.body.author,
         options: req.body.options,
         answer: req.body.answer,
         level: req.body.level,

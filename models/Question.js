@@ -11,6 +11,10 @@ const questionSchema = new Schema({
     type: String,
     required: true
   },
+  author: {
+    type: String,
+    required: true
+  },
   options: {
     type: [String],
     maxItems: 5,

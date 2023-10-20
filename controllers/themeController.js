@@ -8,7 +8,9 @@ const themeController = {
       const theme = {
         theme: req.body.theme, 
         description: req.body.description,
-        image: req.body.image
+        image: req.body.image,
+        countRight: req.body.countRight,
+        countWrong: req.body.countWrong
       }
 
       
@@ -75,7 +77,9 @@ const themeController = {
     const theme = {
       theme: req.body.theme, 
       description: req.body.description,
-      image: req.body.image
+      image: req.body.image,
+      countRight: req.body.countRight,
+      countWrong: req.body.countWrong
     }
 
     
