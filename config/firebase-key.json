@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "quizzlies-images",
+  "private_key_id": "9b72dd57fa80d70b9fee49581d5399dbebf69982",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCi1XvcX6kchrBG\nzv2yBfoEFcA1btrVgtDWr4h1A9R+QX0hRUxXFmwF0SB61WwMHqp7DMK67wUaJWVH\ndfqJn4iIvLTMBt8qF6rRkmGssFH0dA/U25ITTCNWSAFU9nldGGRnsW18rW80YFNO\nEZY+zanCfJTjFlquBeY5+nxGDYXyHZ8tUBCW0SJcFAkSQhAdGTv7LlpeMTXvX9Az\nhEcy8T7Nnl+51FgRR/C/AfSPAPlzWgMgZx/V9stAUseGHm4FTs+ZDFOC5z2KjSOu\nQFaPWPJLABDbvgYrPsTH6o5UBpP8jjTVzeoMHwmHiYVdPSSnmNlxCgzDUz52liBR\nTyiFVJQrAgMBAAECggEAHyfgzKAjD9m3hbzaLsNU/I4a2j5tMZgXlFQ+tED42fV2\n1zRWsH0SSySh5c7LHyCI9wVQhwrvu3p3P+6Tctyq95q/ryALeBbSMMok1TFhZPgG\nBXDDqNyTEFGzq4mDXCwsHekFbWsT0X4ywke8KyUXu6YxqKegzxZC4EoMmCzDOblh\nlzZRR01+CfaFtqOTvuucUebINQtYnTnGmffmutCCAwbGgAX4zHiOThn8IhoDocLk\n+z5ieTiVoxx7UsHhgeWHJEDpqtOs8mJR9dwZfqFMlSgj6bdAIMG+9c8D65w2QdLD\nxqGCcaMLtabo20aC7lPdH14Wj6jgS9XFOHuogibHQQKBgQDko9fFjk4A+yyUQHtz\njVYcPOeCSUBpHRFykPutcaCLlP06znB8PWmhBLojciFnRG7HxBvoN1mfCkj3RYWV\ncl0Aqvq5iendW3wl+xX6F6UgovfFSMv/lZ7FfIT1yltDLvOMSGrEN8mGwKy4FDd9\nnsjSe3/mPqGJwkHCA6hvpxLO6wKBgQC2UbzMJgcJv57a8dJ8S4GGLX+Lvdt2cS6C\ny9q/nHsYrN6QTIHScqcfa+EPl7XWRgS50kmxHsVfqhE8YMnBj2Gfh5eUZ42TLjaz\nm79oTcsrgX5d478fdel/r7gUd6j4dvCgQWpaWGROFJTzDNRn9szVSzLgLpKdLnQi\nPFyf0oB/wQKBgF/17C+8RDzhLpqiXa3n2gZMAZaLC/+R9aqx8w+eqxUqWQX/cvKS\nC+1KwJzz39UpwZ0ST+wsnu7DMFCn2yMYNrR7DnQk0ATZysdeFKE8n0+NVpR0szn4\nIAUe9+b5IUiXQhzUoArupyRpZZR0171fkUXWE54dF0tsPpEhW+ZQpvI1AoGAEsRT\nJMh9TPmWhn8B5Z14FbG1QVMntgdsfDYzrCmVWjLhLgVSD7GRlmBqaEp7gzTt45rL\nzxmVw4UkBQ0Jd40kxWEVr0cBgbbuForfpwLq+O15bny0/a4LfQM/dYvjrr+/gR96\nrRYQLSFdO6+EZbc32nTFJeJlYRyZA7Um66SlaYECgYEAs4nDC0xwZQ4hJ1k8Mx1z\n0d8zUK4o6fnoon8QX+dM+dcpF+d+KBfbJQ80RX3ZVy8LTh4ylZ03f/YNeUudUhYc\nWBWknSZPClkmQaqnAtSijdDNvb6A7yS6dkeROQ6Entm2EMdK6+sYqwI1cLl5/i5I\nPY/idC5xH5+/ZeDF0zXPuro=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-syfhy@quizzlies-images.iam.gserviceaccount.com",
+  "client_id": "102630771152067816060",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-syfhy%40quizzlies-images.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

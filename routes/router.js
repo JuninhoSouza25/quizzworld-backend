@@ -41,8 +41,9 @@ router.use("/", rolesRouter)
 // Image Routes
 
 const imagesRouter = require("./images")
+const firebaseImage = require("../db/firebase")
 
-router.use("/", uploadImage.single("file"), imagesRouter)
+router.use("/", uploadImage.single("file"), firebaseImage, imagesRouter)
 
 
 module.exports = router;
