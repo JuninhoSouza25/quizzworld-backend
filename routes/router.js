@@ -8,6 +8,12 @@ const themeRouter = require("./themes")
 
 router.use("/", themeRouter)
 
+// Themes Routes
+
+const categoryController = require("./categories")
+
+router.use("/", categoryController)
+
 // Levels Routes
 
 const levelRouter = require("./levels")
