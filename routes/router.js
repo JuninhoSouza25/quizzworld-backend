@@ -20,6 +20,12 @@ const levelRouter = require("./levels")
 
 router.use("/", levelRouter)
 
+// Quiz Routes
+
+const quizRouter = require("./quiz")
+
+router.use("/", quizRouter)
+
 // Questions Routes
 
 const questionRouter = require("./questions")
