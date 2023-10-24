@@ -18,7 +18,7 @@ const quizSchema = new Schema({
   questions: {
     type: [String],
     maxItems: 10,
-    required: true
+    required: false
   },
   theme: {
     type: String,
